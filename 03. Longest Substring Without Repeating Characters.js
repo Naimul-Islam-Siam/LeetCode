@@ -13,7 +13,7 @@ const lengthOfLongestSubstring = function (s) {
         if (i > charMap[currentChar]) {
             windowStart = Math.max(windowStart, charMap[currentChar] + 1);
             // i = current index of the char, if i > char's value in hashmap; which means duplicacy of that char
-            // start of window will be maximum of 1+char's value in hashmap(to skip it so that the char when it previously found is not included in the sliding window)  previously stored window
+            // start of window will be maximum of 1+char's value in hashmap(to skip it so that the duplicate char that was previously found is not included in the sliding window)  previously stored window
         }
 
         charMap[currentChar] = i; // new value of the char in hashmap will be updated to current index
