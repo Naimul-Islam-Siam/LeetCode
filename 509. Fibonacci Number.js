@@ -1,3 +1,9 @@
+/*
+   Input: n = 4
+   Output: 3
+   Explanation: F(4) = F(3) + F(2) = 2 + 1 = 3.
+*/
+
 // Runtime: 96 ms, faster than 36.06 % of JavaScript online submissions for Fibonacci Number.
 // Memory Usage: 38.3 MB, less than 61.15 % of JavaScript online submissions for Fibonacci Number.
 // time: O(2^n) | space: O(n)

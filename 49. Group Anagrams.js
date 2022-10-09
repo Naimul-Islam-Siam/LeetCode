@@ -1,3 +1,14 @@
+/*
+    Input: strs = ["eat","tea","tan","ate","nat","bat"]
+    Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+
+    Input: strs = [""]
+    Output: [[""]]
+
+    Input: strs = ["a"]
+    Output: [["a"]]
+*/
+
 // Time Complexity: O(n k logk) n = number of strings, k = length of strings; klogk comes because of sorting; n for n time iterations
 // Space Complexity: O(n k)
 

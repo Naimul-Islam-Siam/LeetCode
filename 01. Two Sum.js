@@ -1,3 +1,12 @@
+/*
+    Input: nums = [2, 7, 11, 15], target = 9
+    Output: [0, 1]
+    Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
+
+    You may assume that each input would have exactly one solution, 
+    and you may not use the same element twice.
+*/
+
 // Time Complexity: O(n^2)
 var twoSum = function (nums, target) {
     for (var i = 0; i < nums.length; i++) {
@@ -30,4 +39,4 @@ const twoSum = function (nums, target) {
     }
 
     return result;
-}
+};

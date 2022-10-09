@@ -1,3 +1,11 @@
+/*
+    Input: s = "anagram", t = "nagaram"
+    Output: true
+
+    Input: s = "rat", t = "car"
+    Output: false
+*/
+
 // Time Complexity: O(nlogn)
 const isAnagram = function (s, t) {
     s = s.split("").sort().join();  //sort in alphabetic order

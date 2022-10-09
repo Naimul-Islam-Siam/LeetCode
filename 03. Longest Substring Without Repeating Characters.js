@@ -1,6 +1,17 @@
-// sliding window approach
-// time complexity : O(n), space complexity: O(min(m,n))   m = length of string, n = number of keys in hashmap
+/* 
+    Input: s = "abcabcbb"
+    Output: 3
+    Explanation: The answer is "abc", with the length of 3.
 
+    Input: s = "pwwkew"
+    Output: 3
+    Explanation: The answer is "wke", with the length of 3.
+        Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
+*/
+
+// ---- Sliding Window Approach ----
+// time complexity : O(n), 
+// space complexity: O(min(m,n)); m = length of string, n = number of keys in hashmap
 
 const lengthOfLongestSubstring = function (s) {
     let charMap = {};
