@@ -22,6 +22,9 @@
 // Space Complexity: O(1)
 function bagOfTokensScore(tokens, power) {
    tokens.sort((a, b) => a - b);
+   // because when decreasing score (to increase power) 
+   // we want to use the max available token to maximize the power as much as possible
+   // score will be decreased by 1 anyway, so it's best to utilize the max token
 
    let i = 0, j = tokens.length - 1;
    let score = 0, maxScore = 0;
