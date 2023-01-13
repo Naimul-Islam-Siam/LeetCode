@@ -18,6 +18,7 @@
 */
 
 
+// --- Greedy Approach ---
 // Time Complexity: O(n)
 // Space Complexity: O(1)
 function minCost(colors, neededTime) {
@@ -65,6 +66,32 @@ function minCost(colors, neededTime) {
       currentTime = neededTime[i];
       time = time + Math.min(currentTime, maxTime);
       maxTime = Math.max(currentTime, maxTime);
+   }
+
+   return time;
+};
+
+// --- Using Stack ---
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+function minCost(colors, neededTime) {
+   let time = 0;
+   let stack = [];
+
+   for (let i = 0; i < colors.length; i++) {
+      stack.push({ "color": colors[i], "time": neededTime[i] });
+      let top = stack.length - 1;
+
+      if (stack[top - 1] && stack[top]["color"] == stack[top - 1]["color"]) {
+         if (stack[top]["time"] > stack[top - 1]["time"]) {
+            let temp = stack[top]["time"];
+            stack[top]["time"] = stack[top - 1]["time"];
+            stack[top - 1]["time"] = temp;
+         }
+
+         time = time + stack[top]["time"];
+         stack.pop();
+      }
    }
 
    return time;
