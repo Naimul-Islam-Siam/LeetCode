@@ -9,6 +9,8 @@
     You must write an algorithm with O(log n) runtime complexity.
  */
 
+// Time Complexity: O(n)
+// Space Complexity: O(1)
 const searchInsert = function (nums, target) {
     let index;
     for (let i = 0; i < nums.length; i++) {
@@ -29,4 +31,32 @@ const searchInsert = function (nums, target) {
     }
 
     return index;
+};
+
+// Time Complexity: O(logn)
+// Space Complexity: O(1)
+function searchInsert(nums, target) {
+    let left = 0, right = nums.length - 1, mid;
+
+    if (target < nums[left]) {
+        return 0;
+    }
+
+    if (target > nums[right]) {
+        return right + 1;
+    }
+
+    while (left <= right) {
+        mid = Math.floor((left + right) / 2);
+
+        if (target == nums[mid]) {
+            return mid;
+        } else if (target < nums[mid]) {
+            right = mid - 1;
+        } else {
+            left = mid + 1;
+        }
+    }
+
+    return left;
 };
