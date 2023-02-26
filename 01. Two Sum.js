@@ -40,3 +40,19 @@ const twoSum = function (nums, target) {
 
     return result;
 };
+
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+function twoSum(nums, target) {
+    let visited = new Map();
+
+    for (let i = 0; i < nums.length; i++) {
+        let remaining = target - nums[i];
+
+        if (visited.has(remaining)) {
+            return [visited.get(remaining), i];
+        }
+
+        visited.set(nums[i], i);
+    }
+};
